@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailRepro.Views.MasterDetail"
+             xmlns:pages="clr-namespace:MasterDetailRepro.Views"
+             MasterBehavior="SplitOnLandscape"
+             Title="Master">
+    <MasterDetailPage.Master>
+        <ContentPage Title="masterxd">
+            <StackLayout>
+                <Label Text="master"/>
+                <Button Text="DetailOne"
+                        Command="{Binding NavigateCommand}"
+                        CommandParameter="/MasterDetail/NavigationPage/DetailOne"/>
+                <Button Text="DetailTwo"
+                        Command="{Binding NavigateCommand}"
+                        CommandParameter="/MasterDetail/NavigationPage/DetailTwo"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
